@@ -2,12 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Filter({ filter, setFilter }) {
+  const handleFilterChange = (value) => {
+    setFilter(value);
+  };
+
   return (
     <input
       type="text"
       placeholder="Wyszukaj..."
       value={filter}
-      onChange={(e) => setFilter(e.target.value)}
+      onChange={(e) => handleFilterChange(e.target.value)}
     />
   );
 }
