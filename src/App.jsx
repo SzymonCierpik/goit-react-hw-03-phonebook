@@ -52,9 +52,9 @@ class App extends Component {
     }));
   };
 
-  handleFilterChange = (event) => {
+  handleFilterChange = (value) => {
     this.setState({
-      filter: event.target.value,
+      filter: value,
     });
   };
 
